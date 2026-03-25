@@ -1,0 +1,82 @@
+.bookshelf-wrapper {
+  position: absolute;
+  left: 0cqw;
+  top: 54%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Abaikan klik pada area pembungkus/gambar */
+}
+
+.bookshelf-img {
+  width: 40cqw;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+  transition: filter 0.3s ease;
+  pointer-events: none;
+}
+
+/* Animasi Pendaran/Napas (Pulse) untuk indikasi bisa diklik */
+@keyframes bookshelfPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* Lingkaran click 50% dari width gambar di tengah-tengah */
+.bookshelf-click-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1); /* Latar kaca putih tipis */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Garis tepi sutra lembut */
+  cursor: pointer;
+  pointer-events: auto; /* Aktifkan hanya pada lingkaran ini */
+  animation: bookshelfPulse 2.5s infinite; /* Efek napas */
+  transition: all 0.3s ease;
+}
+
+/* Ketika lingkaran di-hover */
+.bookshelf-click-circle:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+  transform: translate(-50%, -50%) scale(1.05); /* Efek tombol terangkat (membesar) */
+}
+
+/* Ketika lingkaran ditekan (diklik) */
+.bookshelf-click-circle:active {
+  transform: translate(-50%, -50%) scale(0.95); /* Efek tombol memantul ditekan (mengecil) */
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Efek hover pada gambar ketika lingkaran di-hover */
+.bookshelf-wrapper:hover .bookshelf-img {
+  filter: brightness(1.3) contrast(1.1) drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+.bookshelf-wrapper:active .bookshelf-img {
+  filter: brightness(0.9) drop-shadow(0 5px 15px rgba(0,0,0,0.3));
+}
+
+/* Penyesuaian khusus untuk Handphone saja, agar zoom di Desktop tidak rusak */
+@media screen and (max-width: 768px) {
+  .bookshelf-wrapper {
+    left: 2cqw; /* Menggunakan vw juga agar tidak patah */
+  }
+  /* width: 200px dibuang agar gambar tidak tiba-tiba mengecil di titik zoom ekstrem, 
+     sekarang gambar mutlak akan selalu mengikuti 40vw */
+}

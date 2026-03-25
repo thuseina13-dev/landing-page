@@ -1,0 +1,22 @@
+.title-page {
+  text-align: left;
+  font-size: 3cqw;
+  font-family: 'Poppins', sans-serif;
+  position: absolute;
+  top: 5cqh;
+  margin: 0;
+  z-index: 200; 
+  cursor: pointer;
+  padding: 2cqh 2cqw;
+  background-color: burlywood;
+  filter: blur(1px);
+  border-radius: 0em 10em 10em 0em;
+}
+
+@media screen and (max-width: 768px) {
+  .title-page {
+    font-size: 5cqw;    
+    top: 5cqh;
+    left: 3cqw;
+  }
+}

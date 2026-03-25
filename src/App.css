@@ -1,8 +1,25 @@
+body {
+  background-color: #242424;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  position: relative;
+  width: 100vw;
+  max-width: calc(100vh * (1920 / 945));
+  height: 100vh;
+  max-height: calc(100vw * (945 / 1920));
+  margin: auto;
+  background-image: url("assets/BACKGORUND_3.png");
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
+  overflow: hidden;
+  container-type: size;
 }
 
 .logo {
@@ -11,9 +28,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +41,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -31,12 +51,4 @@
   a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

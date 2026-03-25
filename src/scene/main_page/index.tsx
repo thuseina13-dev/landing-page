@@ -1,24 +1,15 @@
-import { useState } from "react"
+import "./index.css"
+import { BookshelfButton } from "../../shered/bookshelf"
+import { PeriferalButton } from "../../shered/periferal"
+import { TitlePage } from "../../shered/title_page"
 
 
 export const MainPage = () => {
-    const [count, setCount] = useState(0)
-
     return (
         <div>
-            <h1>Main Page </h1>
-            <h1>Vite + React</h1>
-            <div className="card">
-                <button onClick={() => setCount((count) => count + 1)}>
-                    count is {count}
-                </button>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to test HMR
-                </p>
-            </div>
-            <p className="read-the-docs">
-                Click on the Vite and React logos to learn more
-            </p>
+            <TitlePage />
+            <BookshelfButton />
+            <PeriferalButton />
         </div>
     )
 }
