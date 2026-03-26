@@ -58,7 +58,7 @@
     /* Vertical aging color */
     linear-gradient(to bottom, #d2b48c 0%, #f4e4bc 15%, #f4e4bc 85%, #d2b48c 100%);
   
-  padding: 5vh 3vw;
+  padding: 5vh 1vw;
   box-sizing: border-box;
   overflow: hidden;
   display: flex;
@@ -174,8 +174,8 @@
 
 .close-button {
   position: absolute;
-  top: 15px;
-  right: 20px;
+  top: 5px;
+  right: 25px;
   background: none;
   border: none;
   font-size: 2rem;
@@ -183,6 +183,7 @@
   color: #5d4037;
   line-height: 1;
   z-index: 10;
+  padding: 15px;
 }
 
 .close-button:hover {
