@@ -8,20 +8,19 @@ export const TitlePage = () => {
     return (
         <>
             <h1 className="title-page" onClick={() => setIsPopupOpen(true)}>
-                Hello World.... Find Me...
+                Currently growing as a developer — follow the journey
             </h1>
 
             <PopUpInformation isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)}>
                 <h2>Husein Abdullah</h2>
                 <p>
                     Frontend Developer |
-                    Tangerang Selatan, Kademangan, Setu |
-                    {/* 0812 8602 1812 | */}
-
+                    Tangerang Selatan, Kademangan, Setu
                 </p>
                 <p>
-                    <a href="https://www.linkedin.com/in/husein-abdullah-telaumbanua-6bb180143" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/husein-abdullah-telaumbanua-6bb180143</a> |
-                    husein.abdullah.telaumbanua@gmail.com
+                    <a href="https://www.linkedin.com/in/husein-abdullah-telaumbanua-6bb180143" target="_blank" rel="noopener noreferrer">www.linkedin.com/in/husein-abdullah-telaumbanua-6bb180143</a> <br />
+                    <a href="https://github.com/thuseina13-dev/about-me" target="_blank" rel="noopener noreferrer">https://github.com/thuseina13-dev/about-me</a> <br />
+                    husein.abdullah.telaumbanua@gmail.com 
                 </p>
             </PopUpInformation>
         </>
