@@ -35,8 +35,9 @@ export const BookshelfButton: React.FC<BookshelfButtonProps> = ({ onClick }) => 
         <div className="history-item">
           <h3 className="history-company">Kemampuan Teknis</h3>
           <ul className="history-list">
-            <li>JavaScript, React.js, dan Angular</li>
-            <li>Basic SQL Database</li>
+            <li>Javascript & TypeScript</li>
+            <li>React.js</li>
+            <li>Angular</li>            
           </ul>
         </div>
 
