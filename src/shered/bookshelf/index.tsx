@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
-import RakBukuImg from '../../assets/RAK_BUKU_1-removebg-preview.png';
+import RakBukuImg from '../../assets/RAK_BUKU_1-removebg-preview_2.png';
 import { PopUpInformation } from '../pop_up_information';
 
 interface BookshelfButtonProps {
